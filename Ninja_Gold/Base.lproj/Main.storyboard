@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ninja_Gold" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q99-3V-mmr">
+                                <rect key="frame" x="16" y="20" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euN-HL-vNg">
+                                <rect key="frame" x="74" y="20" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-i4-yHI">
+                                <rect key="frame" x="16" y="85" width="35" height="30"/>
+                                <state key="normal" title="Cave"/>
+                                <connections>
+                                    <action selector="BuildingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vrQ-SP-eoe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo4-m3-ncL">
+                                <rect key="frame" x="16" y="48" width="35" height="30"/>
+                                <state key="normal" title="Farm"/>
+                                <connections>
+                                    <action selector="BuildingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aH-bY-wHa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYU-x8-D4z">
+                                <rect key="frame" x="16" y="159" width="47" height="30"/>
+                                <state key="normal" title="Casino"/>
+                                <connections>
+                                    <action selector="BuildingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpH-XR-PoZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HP9-Kc-8ap">
+                                <rect key="frame" x="16" y="122" width="45" height="30"/>
+                                <state key="normal" title="House"/>
+                                <connections>
+                                    <action selector="BuildingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgM-7N-Y8J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You earned 15 gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-Qt-LOm">
+                                <rect key="frame" x="68" y="53" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You earned 15 gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-2S-aRK">
+                                <rect key="frame" x="68" y="90" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You earned 15 gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae8-vn-5cU">
+                                <rect key="frame" x="68" y="126" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You earned 15 gold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-fx-Nd1">
+                                <rect key="frame" x="68" y="164" width="291" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRO-xF-2Yb">
+                                <rect key="frame" x="16" y="264" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yg-Ui-s00"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="euN-HL-vNg" firstAttribute="leading" secondItem="Q99-3V-mmr" secondAttribute="trailing" constant="8" id="8DC-fm-90t"/>
+                            <constraint firstItem="HP9-Kc-8ap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9mw-90-rzO"/>
+                            <constraint firstItem="Zo4-m3-ncL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CgD-fy-pr6"/>
+                            <constraint firstItem="HP9-Kc-8ap" firstAttribute="top" secondItem="dCL-i4-yHI" secondAttribute="bottom" constant="7" id="Cza-21-y6z"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="euN-HL-vNg" secondAttribute="trailing" id="NjU-ZH-ikn"/>
+                            <constraint firstItem="dCL-i4-yHI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QTa-fg-jpN"/>
+                            <constraint firstItem="YYU-x8-D4z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZoL-1Q-wN0"/>
+                            <constraint firstItem="dCL-i4-yHI" firstAttribute="top" secondItem="Zo4-m3-ncL" secondAttribute="bottom" constant="7" id="hdz-kq-Q46"/>
+                            <constraint firstItem="Zo4-m3-ncL" firstAttribute="top" secondItem="Q99-3V-mmr" secondAttribute="bottom" constant="7" id="lKY-e4-msx"/>
+                            <constraint firstItem="euN-HL-vNg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mA1-2F-cv4"/>
+                            <constraint firstItem="YYU-x8-D4z" firstAttribute="top" secondItem="HP9-Kc-8ap" secondAttribute="bottom" constant="7" id="nDN-te-AkV"/>
+                            <constraint firstItem="Q99-3V-mmr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nSK-fg-tTc"/>
+                            <constraint firstItem="Q99-3V-mmr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pEh-Fr-Dhj"/>
+                            <constraint firstItem="rRO-xF-2Yb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pQi-jF-NaZ"/>
+                            <constraint firstItem="YYU-x8-D4z" firstAttribute="top" secondItem="HP9-Kc-8ap" secondAttribute="bottom" constant="7" id="uDS-yB-3kT"/>
+                            <constraint firstItem="rRO-xF-2Yb" firstAttribute="top" secondItem="YYU-x8-D4z" secondAttribute="bottom" constant="75" id="uum-k7-qKv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CasinoGoldEarned" destination="QK4-fx-Nd1" id="7iv-QS-eHg"/>
+                        <outlet property="CaveGoldEarned" destination="RSR-2S-aRK" id="pgV-v9-RV2"/>
+                        <outlet property="FarmGoldEarned" destination="e9p-Qt-LOm" id="api-yG-umg"/>
+                        <outlet property="HouseGoldEarned" destination="Ae8-vn-5cU" id="8aa-JO-KBZ"/>
+                        <outlet property="ScoreLabel" destination="euN-HL-vNg" id="nix-AW-4MG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
